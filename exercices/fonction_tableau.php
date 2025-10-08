@@ -18,6 +18,8 @@ function valeurMax($tab){
             $max = $tab[$i];
         }
     }
+
+    echo "la valeur la plus grande est $max";
     // On retourne la valeur maximale trouvée
     return $max;
 }
@@ -58,11 +60,6 @@ echo calculerMoyenne($tab), "<br/>";
 
 echo "========================\\Exo 3//================================ <br/>";
 
-/**
- * Fonction qui trouve la valeur minimale dans un tableau
- * @param array $tab - Le tableau dans lequel chercher
- * @return mixed - La valeur minimale trouvée
- */
 function valeurMin($tab){
     // NOTE: Le nom de variable 'max' est trompeur, on devrait utiliser 'min'
     $max = $tab[0]; // Cette variable devrait s'appeler $min pour plus de clarté
