@@ -37,9 +37,7 @@
           Exercice
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">fonction tableau</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
         </div>
       </li>
 <!-- ================================================\\LECONS//============================================================= -->
@@ -48,7 +46,7 @@
           Leçons
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">syntaxe PHP</a>
+          <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
         </div>
       </li>
 <!-- ================================================\\EXERCICES//============================================================= -->
@@ -58,8 +56,6 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#"></a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
 
