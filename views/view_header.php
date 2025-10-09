@@ -46,7 +46,7 @@
           Leçons
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../../Cours-PHP/lessons/Syntaxe_PHP.php">Syntaxe PHP</a>
+          <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
           <a class="dropdown-item" href="../../Cours-PHP/lessons/min_max.php">Fonction min et max</a>
         </div>
       </li>
