@@ -38,6 +38,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
+          <a class="dropdown-item" href="../../Cours-PHP/exercices/readline.php">Readline</a>
         </div>
       </li>
 <!-- ================================================\\LECONS//============================================================= -->
