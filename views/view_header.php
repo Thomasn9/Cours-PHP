@@ -6,7 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <title>Document</title>
+  <link rel="icon" type="image/vnd.icon" href="../../Cours-PHP/public/logo.png">
+  <title>Cours-php</title>
+
+  <style>
+    #logo_nav{
+      margin: 1vw;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -20,51 +28,57 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <header>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(135deg, #ce9bcfff 0%, #c537f0ff 100%);"> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Cours PHP Thomas</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
+      <img id="logo_nav" src="../../Cours-PHP/public/logo.png" width="40"  alt="">
+      <strong><a class="navbar-brand" href="#">Cours PHP Thomas</a></strong>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
 
-      <li class="nav-item active">
-        <a class="nav-link" href="../../Cours-PHP/index.php">Home <span class="sr-only">(current)</span></a>
-      </li>
-<!-- ================================================\\EXERCICES//============================================================= -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Exercice
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
-          <a class="dropdown-item" href="../../Cours-PHP/exercices/readline.php">Readline</a>
-        </div>
-      </li>
-<!-- ================================================\\LECONS//============================================================= -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Leçons
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
-          <a class="dropdown-item" href="../../Cours-PHP/lessons/min_max.php">Fonction min et max</a>
-        </div>
-      </li>
-<!-- ================================================\\EXERCICES//============================================================= -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          TP
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#"></a>
-        </div>
-      </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../../Cours-PHP/index.php">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- ================================================\\EXERCICES//============================================================= -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Exercice
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
+            </div>
+          </li>
+          <!-- ================================================\\LECONS//============================================================= -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Leçons
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/min_max.php">Fonction min et max</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/tableau.php">Les Tableaux et Boucles</a>
+            </div>
+          </li>
+          <!-- ================================================\\EXERCICES//============================================================= -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              TP
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"></a>
+            </div>
+          </li>
 
 
-    </ul>
-  </div>
-</nav>
+        </ul>
+      </div>
+    </nav>
   </header>
 
 </body>
