@@ -62,6 +62,8 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/min_max.php">Fonction min et max</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/tableau.php">Les Tableaux et Boucles</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/dump.php">Var Dump et Print_R</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post.php">Formulaire Post</a>
             </div>
           </li>
           <!-- ================================================\\EXERCICES//============================================================= -->
