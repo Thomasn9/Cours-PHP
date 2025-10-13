@@ -51,6 +51,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
               <a class="dropdown-item" href="../../Cours-PHP/exercices/form_post.php">Formulaire Post</a>
+              <a class="dropdown-item" href="../../Cours-PHP/exercices/calculatrice.php">Formulaire Post Calculatrice</a>
             </div>
           </li>
           <!-- ================================================\\CORRECTION EXERCICES//============================================================= -->
@@ -62,6 +63,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr.php">Formulaire Post</a>
               <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr2.php">Formulaire Post 2</a>
+              <a class="dropdown-item" href="../../Cours-PHP/correction/calculatrice_cr.php">Formulaire Post Calculatrice</a>
             </div>
           </li>
           <!-- ================================================\\LECONS//============================================================= -->
@@ -76,6 +78,8 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/tableau.php">Les Tableaux et Boucles</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/dump.php">Var Dump et Print_R</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post.php">Formulaire Post</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post_calcule.php">Formulaire Post calcule</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/isset_empty.php">Isset et Empty</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->
