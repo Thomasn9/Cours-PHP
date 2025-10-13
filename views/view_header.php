@@ -81,6 +81,7 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post_calcule.php">Formulaire Post calcule</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/switch_case.php">Switch case</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/isset_empty.php">Isset et Empty</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/include.php">Include Require</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->
