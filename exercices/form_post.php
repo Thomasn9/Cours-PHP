@@ -1,4 +1,5 @@
 <?php
+include "../views/view_header.php";
 
 echo "===========================================\\EXO 1//===========================================";
 
@@ -31,11 +32,11 @@ if(isset($_POST["submit"])){
 <body>
     <form action="" method="post">
         <label for="prix_ht">Prix hors taxes</label>
-        <input type="number" method="post" name="prix_ht" placeholder="Prix Hors taxe"><br/>
+        <input type="number" name="prix_ht" placeholder="Prix Hors taxe"><br/>
         <label for="nombre_article">Nombre article</label>
-        <input type="number" method="post" name="nombre_article" placeholder="nombre article"><br/>
+        <input type="number" name="nombre_article" placeholder="nombre article"><br/>
         <label for="tva">TVA</label>
-        <input type="number" method="post" name="tva" placeholder="TVA"><br/>
+        <input type="number" name="tva" placeholder="TVA"><br/>
         <input type="submit" value="Total" name="submit"> <br>
         <p>le prix TTC est égale à : <?= $resultat??""?> en €</p>
         <p><?= $message1??""?></p>

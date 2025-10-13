@@ -53,6 +53,17 @@
               <a class="dropdown-item" href="../../Cours-PHP/exercices/form_post.php">Formulaire Post</a>
             </div>
           </li>
+          <!-- ================================================\\CORRECTION EXERCICES//============================================================= -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Correction
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr.php">Formulaire Post</a>
+              <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr2.php">Formulaire Post 2</a>
+            </div>
+          </li>
           <!-- ================================================\\LECONS//============================================================= -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -67,7 +78,7 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post.php">Formulaire Post</a>
             </div>
           </li>
-          <!-- ================================================\\EXERCICES//============================================================= -->
+          <!-- ================================================\\TP//============================================================= -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
