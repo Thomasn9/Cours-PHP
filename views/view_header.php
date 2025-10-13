@@ -79,6 +79,7 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/dump.php">Var Dump et Print_R</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post.php">Formulaire Post</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post_calcule.php">Formulaire Post calcule</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/switch_case.php">Switch case</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/isset_empty.php">Isset et Empty</a>
             </div>
           </li>
