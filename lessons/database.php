@@ -1,6 +1,5 @@
 <?php
 include '../vendor/autoload.php';
-include "../views/view_header.php";
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__,"../.env");
 $dotenv->safeLoad();

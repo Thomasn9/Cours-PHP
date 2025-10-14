@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="icon" type="image/vnd.icon" href="/public/logo.png">
-  <title>Cours-php</title>
+  <title>Cours-php</title>s
 
   <style>
     #logo_nav{
@@ -30,7 +30,7 @@
   <header>
     <!-- <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(135deg, #ce9bcfff 0%, #c537f0ff 100%);"> -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img id="logo_nav" src="../../Cours-PHP/public/logo.png" width="40"  alt="">
+      <img id="logo_nav" src="/public/logo.png" width="40"  alt="">
       <strong><a class="navbar-brand" href="#">Cours PHP Thomas</a></strong>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

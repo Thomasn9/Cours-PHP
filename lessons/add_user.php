@@ -1,3 +1,7 @@
+<?php
+include "../views/view_header.php";
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .code-example {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #f9d2ffff 0%, #b06aacff 100%);
             color: #ecf0f1;
             border-left: 6px solid #3498db;
             padding: 20px;
