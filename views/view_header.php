@@ -86,6 +86,7 @@
               <a class="dropdown-item" href="/lessons/injection_sql.php">Injection SQL</a>
               <a class="dropdown-item" href="/lessons/database.php">Connection a la base de donnée</a>
               <a class="dropdown-item" href="/lessons/add_user.php">Ajout utilisateur BDD</a>
+              <a class="dropdown-item" href="/lessons/connexion_bdd.php">Connexion BDD avec Dotenv et PDO</a>
               <a class="dropdown-item" href="/lessons/mdp_regex.php">Regex sur Mots de passe</a>
             </div>
           </li>
@@ -99,8 +100,6 @@
               <a class="dropdown-item" href="#"></a>
             </div>
           </li>
-
-
         </ul>
       </div>
     </nav>
