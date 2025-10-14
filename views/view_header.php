@@ -52,6 +52,7 @@
               <a class="dropdown-item" href="/exercices/fonction_tableau.php">Fonction tableau</a>
               <a class="dropdown-item" href="/exercices/form_post.php">Formulaire Post</a>
               <a class="dropdown-item" href="/exercices/calculatrice.php">Formulaire Post Calculatrice</a>
+              <a class="dropdown-item" href="/exercices/add_user_base.php">Ajout d'utilisateur et mdp</a>
             </div>
           </li>
           <!-- ================================================\\CORRECTION EXERCICES//============================================================= -->
@@ -85,6 +86,7 @@
               <a class="dropdown-item" href="/lessons/injection_sql.php">Injection SQL</a>
               <a class="dropdown-item" href="/lessons/database.php">Connection a la base de donnée</a>
               <a class="dropdown-item" href="/lessons/add_user.php">Ajout utilisateur BDD</a>
+              <a class="dropdown-item" href="/lessons/mdp_regex.php">Regex sur Mots de passe</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->
