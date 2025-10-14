@@ -3,6 +3,7 @@
         "symfony/var-dumper": "^7.3"
     },
     "require": {
-        "twbs/bootstrap": "4.0.0"
+        "twbs/bootstrap": "4.0.0",
+        "vlucas/phpdotenv": "^5.6"
     }
 }
