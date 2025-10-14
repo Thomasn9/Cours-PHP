@@ -83,6 +83,7 @@
               <a class="dropdown-item" href="../../Cours-PHP/lessons/isset_empty.php">Isset et Empty</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/include.php">Include Require</a>
               <a class="dropdown-item" href="../../Cours-PHP/lessons/injection_sql.php">Injection SQL</a>
+              <a class="dropdown-item" href="../../Cours-PHP/lessons/database.php">Connection a la base de donnée</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->
