@@ -1,0 +1,51 @@
+<?php
+
+include "database.php";
+include "tools.php";
+
+if(isset($_POST["submit"])){
+    
+    $result = add_user2();
+}
+
+function add_user2(){
+    if(empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["password"])){
+        return "veuillez remplire les 4 champs";
+    }
+
+    foreach($_POST as $key => $value){
+        $_POST[$key] = sanitize($value);
+    }
+     if(!filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)){
+        return "email au mauvais format";
+    }
+
+    dump($_POST["password"]);
+    $_POST["password"] = password_hash($_POST["password"],PASSWORD_DEFAULT);
+    dump($_POST["password"]);
+
+
+    save_user($_POST);
+    return "le compt ".$_POST["email"]."a bien été créer";
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajouter un utilisateur</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="firstname" placeholder="saisir le prenom">
+        <input type="text" name="lastname" placeholder="saisir le nom">
+        <input type="email" name="email" placeholder="saisir l'email">
+        <input type="password" name="password" placeholder="saisir le mot de passe">
+        <input type="submit" name="submit" value="envoyer">
+    </form>
+    <p><?= $result?? ""?></p>
+</body>
+</html>

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="icon" type="image/vnd.icon" href="../../Cours-PHP/public/logo.png">
+  <link rel="icon" type="image/vnd.icon" href="/public/logo.png">
   <title>Cours-php</title>
 
   <style>
@@ -40,7 +40,7 @@
         <ul class="navbar-nav">
 
           <li class="nav-item active">
-            <a class="nav-link" href="../../Cours-PHP/index.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/index.php">Home <span class="sr-only">(current)</span></a>
           </li>
           <!-- ================================================\\EXERCICES//============================================================= -->
           <li class="nav-item dropdown">
@@ -49,9 +49,9 @@
               Exercice
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="../../Cours-PHP/exercices/fonction_tableau.php">Fonction tableau</a>
-              <a class="dropdown-item" href="../../Cours-PHP/exercices/form_post.php">Formulaire Post</a>
-              <a class="dropdown-item" href="../../Cours-PHP/exercices/calculatrice.php">Formulaire Post Calculatrice</a>
+              <a class="dropdown-item" href="/exercices/fonction_tableau.php">Fonction tableau</a>
+              <a class="dropdown-item" href="/exercices/form_post.php">Formulaire Post</a>
+              <a class="dropdown-item" href="/exercices/calculatrice.php">Formulaire Post Calculatrice</a>
             </div>
           </li>
           <!-- ================================================\\CORRECTION EXERCICES//============================================================= -->
@@ -61,9 +61,9 @@
               Correction
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr.php">Formulaire Post</a>
-              <a class="dropdown-item" href="../../Cours-PHP/correction/form_post_cr2.php">Formulaire Post 2</a>
-              <a class="dropdown-item" href="../../Cours-PHP/correction/calculatrice_cr.php">Formulaire Post Calculatrice</a>
+              <a class="dropdown-item" href="/correction/form_post_cr.php">Formulaire Post</a>
+              <a class="dropdown-item" href="/correction/form_post_cr2.php">Formulaire Post 2</a>
+              <a class="dropdown-item" href="/correction/calculatrice_cr.php">Formulaire Post Calculatrice</a>
             </div>
           </li>
           <!-- ================================================\\LECONS//============================================================= -->
@@ -73,17 +73,18 @@
               Leçons
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/min_max.php">Fonction min et max</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/tableau.php">Les Tableaux et Boucles</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/dump.php">Var Dump et Print_R</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post.php">Formulaire Post</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/form_post_calcule.php">Formulaire Post calcule</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/switch_case.php">Switch case</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/isset_empty.php">Isset et Empty</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/include.php">Include Require</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/injection_sql.php">Injection SQL</a>
-              <a class="dropdown-item" href="../../Cours-PHP/lessons/database.php">Connection a la base de donnée</a>
+              <a class="dropdown-item" href="/lessons/syntaxe_PHP.php">Syntaxe PHP</a>
+              <a class="dropdown-item" href="/lessons/min_max.php">Fonction min et max</a>
+              <a class="dropdown-item" href="/lessons/tableau.php">Les Tableaux et Boucles</a>
+              <a class="dropdown-item" href="/lessons/dump.php">Var Dump et Print_R</a>
+              <a class="dropdown-item" href="/lessons/form_post.php">Formulaire Post</a>
+              <a class="dropdown-item" href="/lessons/form_post_calcule.php">Formulaire Post calcule</a>
+              <a class="dropdown-item" href="/lessons/switch_case.php">Switch case</a>
+              <a class="dropdown-item" href="/lessons/isset_empty.php">Isset et Empty</a>
+              <a class="dropdown-item" href="/lessons/include.php">Include Require</a>
+              <a class="dropdown-item" href="/lessons/injection_sql.php">Injection SQL</a>
+              <a class="dropdown-item" href="/lessons/database.php">Connection a la base de donnée</a>
+              <a class="dropdown-item" href="/lessons/add_user.php">Ajout utilisateur BDD</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->
