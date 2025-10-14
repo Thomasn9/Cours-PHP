@@ -102,31 +102,41 @@ include "../views/view_header.php";
         }
 
         .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
+            background: #1e1e1e;
+            color: #d4d4d4;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 1.5rem 0;
             overflow-x: auto;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             line-height: 1.4;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .code-comment {
-            color: #75715e;
+            color: #6a9955;
+            font-style: italic;
         }
 
         .code-keyword {
-            color: #f92672;
+            color: #569cd6;
+            font-weight: bold;
         }
 
         .code-string {
-            color: #e6db74;
+            color: #ce9178;
         }
 
         .code-variable {
-            color: #a6e22e;
+            color: #9cdcfe;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-html {
+            color: #808080;
         }
 
         .example-form {
@@ -171,13 +181,15 @@ include "../views/view_header.php";
         }
 
         .output {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border: 1px solid #444;
             border-radius: 4px;
             padding: 1rem;
             margin-top: 1rem;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             white-space: pre-wrap;
+            line-height: 1.5;
         }
 
         .note {
@@ -299,41 +311,41 @@ include "../views/view_header.php";
                     <div class="code-block">
                         <span class="code-comment">&lt;?php</span><br>
                         <span class="code-comment"> //test si le formulaire</span><br>
-                        <span class="code-keyword">if</span> (<span class="code-variable">isset</span>(<span
+                        <span class="code-keyword">if</span> (<span class="code-function">isset</span>(<span
                             class="code-variable">$_POST</span>[<span class="code-string">"submit"</span>])) {<br>
                         <span class="code-comment"> //test si les 2 champs sont remplis</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if</span> (!<span
-                            class="code-variable">empty</span>(<span class="code-variable">$_POST</span>[<span
-                            class="code-string">"firstname"</span>]) && !<span class="code-variable">empty</span>(<span
+                            class="code-function">empty</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-string">"firstname"</span>]) && !<span class="code-function">empty</span>(<span
                             class="code-variable">$_POST</span>[<span class="code-string">"lastname"</span>])) {<br>
                         <span class="code-comment"> //Dump de la super gobale POST</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                            class="code-variable">var_dump</span>(<span class="code-variable">$_POST</span>);<br>
+                            class="code-function">var_dump</span>(<span class="code-variable">$_POST</span>);<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;}<br>
                         <br>
                         }<br>
                         <span class="code-comment">?&gt;</span><br>
-                        <span class="code-comment">&lt;!DOCTYPE html&gt;</span><br>
-                        <span class="code-comment">&lt;html lang="en"&gt;</span><br>
-                        <span class="code-comment">&lt;head&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;meta charset="UTF-8"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;meta name="viewport"
+                        <span class="code-html">&lt;!DOCTYPE html&gt;</span><br>
+                        <span class="code-html">&lt;html lang="en"&gt;</span><br>
+                        <span class="code-html">&lt;head&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;meta charset="UTF-8"&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;meta name="viewport"
                             content="width=device-width, initial-scale=1.0"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;title&gt;Formulaire
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;title&gt;Formulaire
                             GET&lt;/title&gt;</span><br>
-                        <span class="code-comment">&lt;/head&gt;</span><br>
-                        <span class="code-comment">&lt;body&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;form action=""
+                        <span class="code-html">&lt;/head&gt;</span><br>
+                        <span class="code-html">&lt;body&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;form action=""
                             method="post"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input type="text"
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input type="text"
                             name="firstname" placeholder="saisir le prénom"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input type="text"
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input type="text"
                             name="lastname" placeholder="saisir le nom"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input
                             type="submit" value="envoyer" name="submit"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;/form&gt;</span><br>
-                        <span class="code-comment">&lt;/body&gt;</span><br>
-                        <span class="code-comment">&lt;/html&gt;</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;/form&gt;</span><br>
+                        <span class="code-html">&lt;/body&gt;</span><br>
+                        <span class="code-html">&lt;/html&gt;</span>
                     </div>
                 </section>
 
@@ -347,7 +359,7 @@ include "../views/view_header.php";
                             <p>Le formulaire HTML est défini avec la méthode POST et une action vide, ce qui signifie
                                 que les données seront envoyées à la même page.</p>
                             <div class="code-block">
-                                <span class="code-comment">&lt;form action="" method="post"&gt;</span>
+                                <span class="code-html">&lt;form action="" method="post"&gt;</span>
                             </div>
                         </div>
                     </div>
@@ -359,7 +371,7 @@ include "../views/view_header.php";
                             <p>Le code PHP vérifie d'abord si le formulaire a été soumis en testant la présence du
                                 bouton "submit" dans <code>$_POST</code>.</p>
                             <div class="code-block">
-                                <span class="code-keyword">if</span> (<span class="code-variable">isset</span>(<span
+                                <span class="code-keyword">if</span> (<span class="code-function">isset</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"submit"</span>])) {
                             </div>
                         </div>
@@ -371,9 +383,9 @@ include "../views/view_header.php";
                             <h3>Validation des Données</h3>
                             <p>Ensuite, il vérifie que les deux champs "firstname" et "lastname" ne sont pas vides.</p>
                             <div class="code-block">
-                                <span class="code-keyword">if</span> (!<span class="code-variable">empty</span>(<span
+                                <span class="code-keyword">if</span> (!<span class="code-function">empty</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"firstname"</span>])
-                                && !<span class="code-variable">empty</span>(<span
+                                && !<span class="code-function">empty</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"lastname"</span>])) {
                             </div>
                         </div>
@@ -386,7 +398,7 @@ include "../views/view_header.php";
                             <p>Si toutes les conditions sont remplies, le code affiche le contenu de la superglobale
                                 <code>$_POST</code> avec <code>var_dump()</code>.</p>
                             <div class="code-block">
-                                <span class="code-variable">var_dump</span>(<span class="code-variable">$_POST</span>);
+                                <span class="code-function">var_dump</span>(<span class="code-variable">$_POST</span>);
                             </div>
                         </div>
                     </div>
@@ -456,7 +468,7 @@ include "../views/view_header.php";
                                 class="code-string">'firstname'</span>];<br><br>
                             <span class="code-comment">// Bonne pratique (sécurisée)</span><br>
                             <span class="code-keyword">echo</span> <span
-                                class="code-variable">htmlspecialchars</span>(<span
+                                class="code-function">htmlspecialchars</span>(<span
                                 class="code-variable">$_POST</span>[<span class="code-string">'firstname'</span>]);
                         </div>
                     </div>

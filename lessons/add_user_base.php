@@ -21,6 +21,11 @@ function add_user2()
         return "email au mauvais format";
     }
 
+    if(is_user_exists($_POST["email"])){
+        // il ne faut pas etre uassi precis sur les message d'erreur pour des raison de sécuriter et ne pas indiquer que l'adresse mail est utiliser
+        return "cet email est deja utiliser";
+    }
+
     dump($_POST["password"]);
     $_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
     dump($_POST["password"]);

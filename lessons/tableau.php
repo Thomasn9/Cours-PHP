@@ -35,29 +35,45 @@ include "../views/view_header.php";
         }
 
         .code-container {
-            background-color: #2d3748;
-            color: #e2e8f0;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
             border-radius: 10px;
             padding: 1.5rem;
             margin: 1rem 0;
             position: relative;
             overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            line-height: 1.5;
         }
 
         .code-comment {
-            color: #718096;
+            color: #6a9955;
+            font-style: italic;
         }
 
         .code-keyword {
-            color: #63b3ed;
+            color: #569cd6;
+            font-weight: bold;
         }
 
         .code-string {
-            color: #68d391;
+            color: #ce9178;
         }
 
         .code-variable {
-            color: #fbb6ce;
+            color: #9cdcfe;
+        }
+
+        .code-function {
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .code-operator {
+            color: #d4d4d4;
         }
 
         .example-card {
@@ -212,9 +228,9 @@ include "../views/view_header.php";
                         <div class="card-body">
                             <div class="code-container">
                                 <pre><code><span class="code-comment">//Tableau indexé (avec des valeurs)</span>
-<span class="code-keyword">$tab_indexe</span> = [<span class="code-variable">0</span>,<span class="code-variable">15</span>,<span class="code-variable">22</span>,<span class="code-variable">33</span>,<span class="code-variable">47</span>];
+<span class="code-keyword">$tab_indexe</span> = [<span class="code-number">0</span>,<span class="code-number">15</span>,<span class="code-number">22</span>,<span class="code-number">33</span>,<span class="code-number">47</span>];
 <span class="code-comment">//Ajout d'une colonne tableau indexé</span>
-<span class="code-keyword">$tab_indexe</span>[] = <span class="code-variable">20</span>;</code></pre>
+<span class="code-keyword">$tab_indexe</span>[] = <span class="code-number">20</span>;</code></pre>
                             </div>
                         </div>
                     </div>
@@ -279,7 +295,7 @@ include "../views/view_header.php";
                         <div class="card-body">
                             <div class="code-container">
                                 <pre><code><span class="code-comment">//Iteration tableau indexé avec la boucle for</span>
-<span class="code-keyword">for</span> (<span class="code-variable">$i</span>=<span class="code-variable">0</span>; <span class="code-variable">$i</span> &lt; <span class="code-keyword">count</span>(<span class="code-keyword">$tab_indexe</span>); <span class="code-variable">$i</span>++) { 
+<span class="code-keyword">for</span> (<span class="code-variable">$i</span>=<span class="code-number">0</span>; <span class="code-variable">$i</span> &lt; <span class="code-function">count</span>(<span class="code-keyword">$tab_indexe</span>); <span class="code-variable">$i</span>++) { 
     <span class="code-keyword">echo</span> <span class="code-keyword">$tab_indexe</span>[<span class="code-variable">$i</span>] . <span class="code-string">"&lt;br&gt;"</span>;
 }</code></pre>
                             </div>
@@ -293,9 +309,9 @@ include "../views/view_header.php";
                         <div class="card-body">
                             <div class="code-container">
                                 <pre><code><span class="code-comment">//compteur (index)</span>
-<span class="code-keyword">$cpt</span> = <span class="code-variable">0</span>;
+<span class="code-keyword">$cpt</span> = <span class="code-number">0</span>;
 <span class="code-comment">//Itération tableau indexé avec la boucle while</span>
-<span class="code-keyword">while</span>(<span class="code-keyword">$cpt</span> &lt;<span class="code-keyword">count</span>(<span class="code-keyword">$tab_indexe</span>)) {
+<span class="code-keyword">while</span>(<span class="code-keyword">$cpt</span> &lt;<span class="code-function">count</span>(<span class="code-keyword">$tab_indexe</span>)) {
     <span class="code-keyword">echo</span> <span class="code-keyword">$tab_indexe</span>[<span class="code-variable">$i</span>] . <span class="code-string">"&lt;br&gt;"</span>;
     <span class="code-keyword">$cpt</span>++;
 }</code></pre>

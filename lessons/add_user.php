@@ -5,20 +5,22 @@ include "../views/view_header.php";
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cours PHP - Inscription Utilisateur Sécurisée</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .code-example {
-            background: linear-gradient(135deg, #f9d2ffff 0%, #b06aacff 100%);
-            color: #ecf0f1;
-            border-left: 6px solid #3498db;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border-left: 6px solid #007acc;
             padding: 20px;
             margin: 20px 0;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             border-radius: 0 10px 10px 0;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            line-height: 1.5;
         }
         .security-section {
             background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
@@ -59,17 +61,30 @@ include "../views/view_header.php";
             margin: 20px 0;
         }
         .php-keyword {
-            color: #f39c12;
+            color: #569cd6;
             font-weight: bold;
         }
         .php-function {
-            color: #3498db;
+            color: #dcdcaa;
         }
         .php-variable {
-            color: #9b59b6;
+            color: #9cdcfe;
         }
         .php-string {
-            color: #2ecc71;
+            color: #ce9178;
+        }
+        .php-comment {
+            color: #6a9955;
+            font-style: italic;
+        }
+        .php-html {
+            color: #808080;
+        }
+        .php-operator {
+            color: #d4d4d4;
+        }
+        .php-number {
+            color: #b5cea8;
         }
     </style>
 </head>
@@ -188,9 +203,9 @@ include "../views/view_header.php";
                             <h5 class="card-title">✅ Validation des champs requis</h5>
                             <div class="code-example">
                                 <pre><code>
-if (empty($_POST["firstname"]) || empty($_POST["lastname"]) || 
-    empty($_POST["email"]) || empty($_POST["password"])) {
-    return "veuillez remplir les 4 champs";
+<span class="php-keyword">if</span> (<span class="php-function">empty</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"firstname"</span>]) <span class="php-operator">||</span> <span class="php-function">empty</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"lastname"</span>]) <span class="php-operator">||</span> 
+    <span class="php-function">empty</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"email"</span>]) <span class="php-operator">||</span> <span class="php-function">empty</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"password"</span>])) {
+    <span class="php-keyword">return</span> <span class="php-string">"veuillez remplir les 4 champs"</span>;
 }
                                 </code></pre>
                             </div>
@@ -205,8 +220,8 @@ if (empty($_POST["firstname"]) || empty($_POST["lastname"]) ||
                             <h5 class="card-title">✅ Nettoyage des données</h5>
                             <div class="code-example">
                                 <pre><code>
-foreach ($_POST as $key => $value) {
-    $_POST[$key] = sanitize($value);
+<span class="php-keyword">foreach</span> (<span class="php-variable">$_POST</span> <span class="php-keyword">as</span> <span class="php-variable">$key</span> <span class="php-operator">=></span> <span class="php-variable">$value</span>) {
+    <span class="php-variable">$_POST</span>[<span class="php-variable">$key</span>] = <span class="php-function">sanitize</span>(<span class="php-variable">$value</span>);
 }
                                 </code></pre>
                             </div>
@@ -223,8 +238,8 @@ foreach ($_POST as $key => $value) {
                             <h5 class="card-title">✅ Validation de l'email</h5>
                             <div class="code-example">
                                 <pre><code>
-if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-    return "email au mauvais format";
+<span class="php-keyword">if</span> (<span class="php-operator">!</span><span class="php-function">filter_var</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"email"</span>], <span class="php-variable">FILTER_VALIDATE_EMAIL</span>)) {
+    <span class="php-keyword">return</span> <span class="php-string">"email au mauvais format"</span>;
 }
                                 </code></pre>
                             </div>
@@ -239,9 +254,9 @@ if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
                             <h5 class="card-title">✅ Hashage du mot de passe</h5>
                             <div class="code-example">
                                 <pre><code>
-$_POST["password"] = password_hash(
-    $_POST["password"], 
-    PASSWORD_DEFAULT
+<span class="php-variable">$_POST</span>[<span class="php-string">"password"</span>] = <span class="php-function">password_hash</span>(
+    <span class="php-variable">$_POST</span>[<span class="php-string">"password"</span>], 
+    <span class="php-variable">PASSWORD_DEFAULT</span>
 );
                                 </code></pre>
                             </div>
@@ -261,11 +276,11 @@ $_POST["password"] = password_hash(
                 <p>Cette fonction (définie dans tools.php) devrait normalement :</p>
                 <div class="code-example">
                     <pre><code>
-function sanitize($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
+<span class="php-keyword">function</span> <span class="php-function">sanitize</span>(<span class="php-variable">$data</span>) {
+    <span class="php-variable">$data</span> = <span class="php-function">trim</span>(<span class="php-variable">$data</span>);
+    <span class="php-variable">$data</span> = <span class="php-function">stripslashes</span>(<span class="php-variable">$data</span>);
+    <span class="php-variable">$data</span> = <span class="php-function">htmlspecialchars</span>(<span class="php-variable">$data</span>);
+    <span class="php-keyword">return</span> <span class="php-variable">$data</span>;
 }
                     </code></pre>
                 </div>
@@ -276,10 +291,10 @@ function sanitize($data) {
                 <p>Utilise l'algorithme bcrypt par défaut pour créer un hash sécurisé :</p>
                 <div class="code-example">
                     <pre><code>
-// Avant hashage: "monMotDePasse123"
-// Après hashage: "$2y$10$8sA2b5c7d9e1f3g5h7j9k1l3m5n7o9p1..."
+<span class="php-comment">// Avant hashage: "monMotDePasse123"</span>
+<span class="php-comment">// Après hashage: "$2y$10$8sA2b5c7d9e1f3g5h7j9k1l3m5n7o9p1..."</span>
 
-$hash = password_hash($password, PASSWORD_DEFAULT);
+<span class="php-variable">$hash</span> = <span class="php-function">password_hash</span>(<span class="php-variable">$password</span>, <span class="php-variable">PASSWORD_DEFAULT</span>);
                     </code></pre>
                 </div>
             </div>
@@ -289,16 +304,16 @@ $hash = password_hash($password, PASSWORD_DEFAULT);
                 <p>Cette fonction (définie dans database.php) devrait utiliser des requêtes préparées :</p>
                 <div class="code-example">
                     <pre><code>
-function save_user($userData) {
-    $stmt = $pdo->prepare(
-        "INSERT INTO users (firstname, lastname, email, password) 
-         VALUES (?, ?, ?, ?)"
+<span class="php-keyword">function</span> <span class="php-function">save_user</span>(<span class="php-variable">$userData</span>) {
+    <span class="php-variable">$stmt</span> = <span class="php-variable">$pdo</span><span class="php-operator">-></span><span class="php-function">prepare</span>(
+        <span class="php-string">"INSERT INTO users (firstname, lastname, email, password) 
+         VALUES (?, ?, ?, ?)"</span>
     );
-    return $stmt->execute([
-        $userData['firstname'],
-        $userData['lastname'], 
-        $userData['email'],
-        $userData['password']
+    <span class="php-keyword">return</span> <span class="php-variable">$stmt</span><span class="php-operator">-></span><span class="php-function">execute</span>([
+        <span class="php-variable">$userData</span>[<span class="php-string">'firstname'</span>],
+        <span class="php-variable">$userData</span>[<span class="php-string">'lastname'</span>], 
+        <span class="php-variable">$userData</span>[<span class="php-string">'email'</span>],
+        <span class="php-variable">$userData</span>[<span class="php-string">'password'</span>]
     ]);
 }
                     </code></pre>
@@ -318,9 +333,9 @@ function save_user($userData) {
                             <p>Ajouter des règles de validation spécifiques :</p>
                             <div class="code-example">
                                 <pre><code>
-// Longueur minimale du mot de passe
-if (strlen($_POST["password"]) < 8) {
-    return "Le mot de passe doit faire au moins 8 caractères";
+<span class="php-comment">// Longueur minimale du mot de passe</span>
+<span class="php-keyword">if</span> (<span class="php-function">strlen</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"password"</span>]) < <span class="php-number">8</span>) {
+    <span class="php-keyword">return</span> <span class="php-string">"Le mot de passe doit faire au moins 8 caractères"</span>;
 }
                                 </code></pre>
                             </div>
@@ -335,8 +350,8 @@ if (strlen($_POST["password"]) < 8) {
                             <p>Vérifier que l'email n'existe pas déjà :</p>
                             <div class="code-example">
                                 <pre><code>
-if (email_exists($_POST["email"])) {
-    return "Cet email est déjà utilisé";
+<span class="php-keyword">if</span> (<span class="php-function">email_exists</span>(<span class="php-variable">$_POST</span>[<span class="php-string">"email"</span>])) {
+    <span class="php-keyword">return</span> <span class="php-string">"Cet email est déjà utilisé"</span>;
 }
                                 </code></pre>
                             </div>
@@ -351,8 +366,8 @@ if (email_exists($_POST["email"])) {
                             <p>Ajouter un token de sécurité :</p>
                             <div class="code-example">
                                 <pre><code>
-&lt;input type="hidden" name="csrf_token" 
-       value="&lt;?= $_SESSION['csrf_token'] ?&gt;"&gt;
+<span class="php-html">&lt;input type="hidden" name="csrf_token" 
+       value="&lt;?= $_SESSION['csrf_token'] ?&gt;"&gt;</span>
                                 </code></pre>
                             </div>
                         </div>

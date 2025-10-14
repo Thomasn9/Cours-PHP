@@ -102,35 +102,45 @@ include "../views/view_header.php";
         }
 
         .code-block {
-            background: #2d2d2d;
-            color: #f8f8f2;
+            background: #1e1e1e;
+            color: #d4d4d4;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 1.5rem 0;
             overflow-x: auto;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             line-height: 1.4;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .code-comment {
-            color: #75715e;
+            color: #6a9955;
+            font-style: italic;
         }
 
         .code-keyword {
-            color: #f92672;
+            color: #569cd6;
+            font-weight: bold;
         }
 
         .code-string {
-            color: #e6db74;
+            color: #ce9178;
         }
 
         .code-variable {
-            color: #a6e22e;
+            color: #9cdcfe;
         }
 
         .code-function {
-            color: #66d9ef;
+            color: #dcdcaa;
+        }
+
+        .code-number {
+            color: #b5cea8;
+        }
+
+        .code-html {
+            color: #808080;
         }
 
         .example-form {
@@ -175,13 +185,15 @@ include "../views/view_header.php";
         }
 
         .output {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            border: 1px solid #444;
             border-radius: 4px;
             padding: 1rem;
             margin-top: 1rem;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
             white-space: pre-wrap;
+            line-height: 1.5;
         }
 
         .result-success {
@@ -379,7 +391,7 @@ include "../views/view_header.php";
                             class="code-string">"../views/view_header.php"</span>;<br>
                         <br>
                         <span class="code-comment">//Tester si le formulaire est submit</span><br>
-                        <span class="code-keyword">if</span> (<span class="code-variable">isset</span>(<span
+                        <span class="code-keyword">if</span> (<span class="code-function">isset</span>(<span
                             class="code-variable">$_POST</span>[<span class="code-string">"submit"</span>])) {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-variable">$result</span> = <span
                             class="code-function">traitement</span>();<br>
@@ -389,10 +401,10 @@ include "../views/view_header.php";
                         <span class="code-keyword">function</span> <span class="code-function">traitement</span>() {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">//Test si un des champs est vide</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if</span> (<span
-                            class="code-variable">empty</span>(<span class="code-variable">$_POST</span>[<span
-                            class="code-string">"prix_ht"</span>]) || <span class="code-variable">empty</span>(<span
+                            class="code-function">empty</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-string">"prix_ht"</span>]) || <span class="code-function">empty</span>(<span
                             class="code-variable">$_POST</span>[<span class="code-string">"quantite"</span>]) || <span
-                            class="code-variable">empty</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-function">empty</span>(<span class="code-variable">$_POST</span>[<span
                             class="code-string">"tva"</span>])) {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span
                             class="code-string">"Veuillez remplir tous les champs du formulaire"</span>;<br>
@@ -400,11 +412,11 @@ include "../views/view_header.php";
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">//Test si un des champs n'est pas
                             nombre</span><br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">if</span> (!<span
-                            class="code-variable">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-function">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
                             class="code-string">"prix_ht"</span>]) || !<span
-                            class="code-variable">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-function">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
                             class="code-string">"quantite"</span>]) || !<span
-                            class="code-variable">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
+                            class="code-function">is_numeric</span>(<span class="code-variable">$_POST</span>[<span
                             class="code-string">"tva"</span>])) {<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span
                             class="code-string">"Veuillez saisir des nombres"</span>;<br>
@@ -419,32 +431,32 @@ include "../views/view_header.php";
                         }<br>
                         <br>
                         <span class="code-comment">?&gt;</span><br>
-                        <span class="code-comment">&lt;html lang="en"&gt;</span><br>
-                        <span class="code-comment">&lt;head&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;meta charset="UTF-8"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;meta name="viewport"
+                        <span class="code-html">&lt;html lang="en"&gt;</span><br>
+                        <span class="code-html">&lt;head&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;meta charset="UTF-8"&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;meta name="viewport"
                             content="width=device-width, initial-scale=1.0"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;title&gt;Formulaire POST exercice
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;title&gt;Formulaire POST exercice
                             1&lt;/title&gt;</span><br>
-                        <span class="code-comment">&lt;/head&gt;</span><br>
-                        <span class="code-comment">&lt;body&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;h1&gt;Calculer le prix
+                        <span class="code-html">&lt;/head&gt;</span><br>
+                        <span class="code-html">&lt;body&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;h1&gt;Calculer le prix
                             TTC&lt;/h1&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;form action=""
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;form action=""
                             method="post"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input type="text"
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input type="text"
                             name="prix_ht" placeholder="Saisir le prix HT"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input type="text"
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input type="text"
                             name="quantite" placeholder="Saisir la quantite de produit"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input type="text"
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input type="text"
                             name="tva" placeholder="Saisir le taux de TVA : 20 pour 20%"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;input
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;input
                             type="submit" value="calculer" name="submit"&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;/form&gt;</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-comment">&lt;p&gt;&lt;?= $result ??
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;/form&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-html">&lt;p&gt;&lt;?= $result ??
                             ""?&gt;&lt;/p&gt;</span><br>
-                        <span class="code-comment">&lt;/body&gt;</span><br>
-                        <span class="code-comment">&lt;/html&gt;</span>
+                        <span class="code-html">&lt;/body&gt;</span><br>
+                        <span class="code-html">&lt;/html&gt;</span>
                     </div>
                 </section>
 
@@ -471,7 +483,7 @@ include "../views/view_header.php";
                             <p>Le code vérifie si le formulaire a été soumis en testant la présence du bouton "submit"
                                 dans <code>$_POST</code>.</p>
                             <div class="code-block">
-                                <span class="code-keyword">if</span> (<span class="code-variable">isset</span>(<span
+                                <span class="code-keyword">if</span> (<span class="code-function">isset</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"submit"</span>]))
                                 {<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-variable">$result</span> = <span
@@ -504,21 +516,21 @@ include "../views/view_header.php";
                             <p>La fonction vérifie d'abord que tous les champs sont remplis, puis que tous contiennent
                                 des valeurs numériques.</p>
                             <div class="code-block">
-                                <span class="code-keyword">if</span> (<span class="code-variable">empty</span>(<span
+                                <span class="code-keyword">if</span> (<span class="code-function">empty</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"prix_ht"</span>]) ||
-                                <span class="code-variable">empty</span>(<span class="code-variable">$_POST</span>[<span
+                                <span class="code-function">empty</span>(<span class="code-variable">$_POST</span>[<span
                                     class="code-string">"quantite"</span>]) || <span
-                                    class="code-variable">empty</span>(<span class="code-variable">$_POST</span>[<span
+                                    class="code-function">empty</span>(<span class="code-variable">$_POST</span>[<span
                                     class="code-string">"tva"</span>])) {<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span
                                     class="code-string">"Veuillez remplir tous les champs du formulaire"</span>;<br>
                                 }<br>
                                 <span class="code-keyword">if</span> (!<span
-                                    class="code-variable">is_numeric</span>(<span
+                                    class="code-function">is_numeric</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"prix_ht"</span>]) ||
-                                !<span class="code-variable">is_numeric</span>(<span
+                                !<span class="code-function">is_numeric</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"quantite"</span>]) ||
-                                !<span class="code-variable">is_numeric</span>(<span
+                                !<span class="code-function">is_numeric</span>(<span
                                     class="code-variable">$_POST</span>[<span class="code-string">"tva"</span>])) {<br>
                                 &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span> <span
                                     class="code-string">"Veuillez saisir des nombres"</span>;<br>
@@ -554,7 +566,7 @@ include "../views/view_header.php";
                             <p>Le résultat est affiché en utilisant l'opérateur de coalescence nulle (<code>??</code>)
                                 pour éviter une erreur si la variable <code>$result</code> n'est pas définie.</p>
                             <div class="code-block">
-                                <span class="code-comment">&lt;p&gt;&lt;?= $result ?? ""?&gt;&lt;/p&gt;</span>
+                                <span class="code-html">&lt;p&gt;&lt;?= $result ?? ""?&gt;&lt;/p&gt;</span>
                             </div>
                         </div>
                     </div>
@@ -705,7 +717,7 @@ include "../views/view_header.php";
                             class="code-string">"quantite"</span>] * (<span class="code-variable">$_POST</span>[<span
                             class="code-string">"tva"</span>] /<span class="code-number">100</span> + <span
                             class="code-number">1</span>);<br>
-                        <span class="code-keyword">return</span> <span class="code-variable">number_format</span>(<span
+                        <span class="code-keyword">return</span> <span class="code-function">number_format</span>(<span
                             class="code-variable">$prix_ttc</span>, <span class="code-number">2</span>, <span
                             class="code-string">','</span>, <span class="code-string">' '</span>) . <span
                             class="code-string">" €"</span>;

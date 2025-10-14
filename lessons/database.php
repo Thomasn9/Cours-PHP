@@ -32,11 +32,24 @@ function save_user(array $user){
     // exectution
     $bdd->execute();
 
+    
+
     }catch(Exception $e){
         echo $e->getMessage();
     }
     
-
 }
+
+function is_user_exists(string $email): bool {
+        $sql = "SELECT u.id AS users AS u WHERE u.email = ?";
+        $bdd = connectBDD()->prepare($sql);
+        $bdd->bindParam(1,$email,PDO::PARAM_STR);
+        $bdd->execute();
+        $data = $bdd->fetch(PDO::FETCH_ASSOC);
+        if(count($data)>0){
+            return true;
+        }
+        return false;
+    }
 
 ?>

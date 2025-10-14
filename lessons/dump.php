@@ -35,34 +35,45 @@ include "../views/view_header.php";
         }
         
         .code-container {
-            background-color: #2d3748;
-            color: #e2e8f0;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
             border-radius: 10px;
             padding: 1.5rem;
             margin: 1rem 0;
             position: relative;
             overflow-x: auto;
+            font-family: 'Consolas', 'Courier New', monospace;
+            line-height: 1.5;
         }
         
         .code-comment {
-            color: #718096;
+            color: #6a9955;
             font-style: italic;
         }
         
         .code-keyword {
-            color: #63b3ed;
+            color: #569cd6;
+            font-weight: bold;
         }
         
         .code-string {
-            color: #68d391;
+            color: #ce9178;
         }
         
         .code-variable {
-            color: #fbb6ce;
+            color: #9cdcfe;
         }
         
         .code-function {
-            color: #f6ad55;
+            color: #dcdcaa;
+        }
+        
+        .code-number {
+            color: #b5cea8;
+        }
+        
+        .code-operator {
+            color: #d4d4d4;
         }
         
         .example-card {
@@ -81,12 +92,13 @@ include "../views/view_header.php";
         }
         
         .output-pre {
-            background-color: #2d3748;
-            color: #e2e8f0;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
             padding: 1rem;
             border-radius: 5px;
             overflow-x: auto;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Courier New', monospace;
+            line-height: 1.5;
         }
         
         .concept-card {
@@ -199,7 +211,7 @@ include "../views/view_header.php";
                             <div class="code-container">
                                 <pre><code><span class="code-comment">// Exemple avec différents types de variables</span>
 <span class="code-variable">$string</span> = <span class="code-string">"Hello World"</span>;
-<span class="code-variable">$number</span> = <span class="code-variable">42</span>;
+<span class="code-variable">$number</span> = <span class="code-number">42</span>;
 <span class="code-variable">$array</span> = [<span class="code-string">"pomme"</span>, <span class="code-string">"banane"</span>, <span class="code-string">"orange"</span>];
 <span class="code-variable">$bool</span> = <span class="code-keyword">true</span>;
 
@@ -244,7 +256,7 @@ bool(true)
     <span class="code-string">"prenom"</span> => <span class="code-string">"Mathieu"</span>,
     <span class="code-string">"nom"</span> => <span class="code-string">"Adrar"</span>,
     <span class="code-string">"email"</span> => <span class="code-string">"mathieu@test.com"</span>,
-    <span class="code-string">"age"</span> => <span class="code-variable">30</span>
+    <span class="code-string">"age"</span> => <span class="code-number">30</span>
 ];
 
 <span class="code-function">var_dump</span>(<span class="code-variable">$user</span>);</code></pre>
@@ -286,7 +298,7 @@ array(4) {
                             <div class="code-container">
                                 <pre><code><span class="code-comment">// Exemple avec print_r</span>
 <span class="code-variable">$string</span> = <span class="code-string">"Hello World"</span>;
-<span class="code-variable">$number</span> = <span class="code-variable">42</span>;
+<span class="code-variable">$number</span> = <span class="code-number">42</span>;
 <span class="code-variable">$array</span> = [<span class="code-string">"pomme"</span>, <span class="code-string">"banane"</span>, <span class="code-string">"orange"</span>];
 
 <span class="code-comment">// Affichage avec print_r</span>
@@ -326,8 +338,8 @@ Array
                                 <pre><code><span class="code-comment">// Tableau complexe</span>
 <span class="code-variable">$data</span> = [
     <span class="code-string">"users"</span> => [
-        [<span class="code-string">"name"</span> => <span class="code-string">"Alice"</span>, <span class="code-string">"age"</span> => <span class="code-variable">25</span>],
-        [<span class="code-string">"name"</span> => <span class="code-string">"Bob"</span>, <span class="code-string">"age"</span> => <span class="code-variable">30</span>]
+        [<span class="code-string">"name"</span> => <span class="code-string">"Alice"</span>, <span class="code-string">"age"</span> => <span class="code-number">25</span>],
+        [<span class="code-string">"name"</span> => <span class="code-string">"Bob"</span>, <span class="code-string">"age"</span> => <span class="code-number">30</span>]
     ],
     <span class="code-string">"settings"</span> => [<span class="code-string">"theme"</span> => <span class="code-string">"dark"</span>, <span class="code-string">"language"</span> => <span class="code-string">"fr"</span>]
 ];
@@ -502,10 +514,10 @@ Array
                             <div class="mb-2">
                                 <strong>Fonction de débogage rapide:</strong>
                                 <div class="code-container small mt-1">
-<pre><code>function debug($var) {
-    echo "&lt;pre&gt;";
-    var_dump($var);
-    echo "&lt;/pre&gt;";
+<pre><code><span class="code-keyword">function</span> <span class="code-function">debug</span>(<span class="code-variable">$var</span>) {
+    <span class="code-keyword">echo</span> <span class="code-string">"&lt;pre&gt;"</span>;
+    <span class="code-function">var_dump</span>(<span class="code-variable">$var</span>);
+    <span class="code-keyword">echo</span> <span class="code-string">"&lt;/pre&gt;"</span>;
 }</code></pre>
                                 </div>
                             </div>
