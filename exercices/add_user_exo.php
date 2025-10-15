@@ -5,10 +5,10 @@ include "tools.php";
 
 if (isset($_POST["submit"])) {
 
-    $result = add_user2();
+    $result = add_user();
 }
 
-function add_user2()
+function add_user()
 {
     if (empty($_POST["firstname"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["password"])) {
         return "veuillez remplire les 4 champs";
