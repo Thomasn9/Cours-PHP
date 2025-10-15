@@ -57,14 +57,20 @@ function add_user2()
 
 }
 
+function getFileExtension($file)
+{
+    return substr(strrchr($file, '.'), 1);
+}
+
+
 function import_file(): bool|string
 {
     if (isset($_FILES["img"])) {
-        $old_name = $_FILES["image"]["name"];
+        $old_name = $_FILES["img"]["name"];
         $ext = getFileExtension($old_name);
 
 
-        if ($_FILES["image"]["size"] > (100 * 1024 * 1024)) {
+        if ($_FILES["img"]["size"] > (100 * 1024 * 1024)) {
             echo "l'image est trop grosse !!";
             return false;
 
@@ -76,12 +82,12 @@ function import_file(): bool|string
         $new_name = uniqid("img") . "." . $ext;
         // dd($old_name,$ext,$new_name);
 
-        move_uploaded_file($_FILES["image"]["tmp_name"], "../public/asset/" . $new_name);
+        move_uploaded_file($_FILES["img"]["tmp_name"], "../public/asset/" . $new_name);
         return $new_name;
 
     }
     return false;
-    
+
 }
 
 ?>
@@ -102,7 +108,7 @@ function import_file(): bool|string
         <input type="email" name="email" placeholder="saisir l'email"><br>
         <input type="password" name="password" placeholder="saisir le mot de passe"><br>
         <input type="password" name="password2" placeholder="Confirmer le mot de passe"><br>
-        <input type="files">
+        <input type="file" name="img">
         <input type="submit" name="submit" value="envoyer">
     </form>
     <p><?= $result ?? "" ?></p>
