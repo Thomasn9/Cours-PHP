@@ -22,8 +22,18 @@ function add_article()
         }
     }
 
-    save_article($_POST);
-    return "L'article " . $_POST["title"] . " a été ajouté avec succes";
+    if (strlen($_POST["title"]) < 1) {
+        return "le titre est trp court il doit faire plus de 2 caractère !";
+    }
+// try catch pour l'envoie en BDD
+    try {
+        save_article($_POST);
+        return "L'article " . $_POST["title"] . " a été ajouté avec succes";
+
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+
 }
 
 
