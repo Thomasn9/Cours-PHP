@@ -52,7 +52,8 @@
               <a class="dropdown-item" href="/exercices/fonction_tableau.php">Fonction tableau</a>
               <a class="dropdown-item" href="/exercices/form_post.php">Formulaire Post</a>
               <a class="dropdown-item" href="/exercices/calculatrice.php">Formulaire Post Calculatrice</a>
-              <a class="dropdown-item" href="/exercices/add_user_exo.php">Ajout d'utilisateur + img/a>
+              <a class="dropdown-item" href="/exercices/add_user_exo.php">Ajout d'utilisateur + img</a>
+              <a class="dropdown-item" href="/exercices/add_article.php">Ajout d'article</a>
             </div>
           </li>
           <!-- ================================================\\CORRECTION EXERCICES//============================================================= -->
