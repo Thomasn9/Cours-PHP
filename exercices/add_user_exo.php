@@ -40,9 +40,48 @@ function add_user2()
     $_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
     dump($_POST["password"]);
 
+    try {
+        //verification et ajout image dans POST
+        $file_name = import_file();
+        $_POST["img"] = $file_name;
 
-    save_user($_POST);
-    return "le compt " . $_POST["email"] . "a bien été créer";
+        if (!import_file()) {
+            $_POST["img"] = "profil.png";
+        }
+        //ajout en BDD
+        save_user($_POST);
+        return "Le compte " . $_POST["email"] . " a été ajouté avec succes";
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+
+}
+
+function import_file(): bool|string
+{
+    if (isset($_FILES["img"])) {
+        $old_name = $_FILES["image"]["name"];
+        $ext = getFileExtension($old_name);
+
+
+        if ($_FILES["image"]["size"] > (100 * 1024 * 1024)) {
+            echo "l'image est trop grosse !!";
+            return false;
+
+        } else if ($ext != "png" && $ext != "PNG" && $ext != "jpg" && $ext != "jpeg") {
+            echo "Le format n'est pas pris en compte";
+            return false;
+        }
+
+        $new_name = uniqid("img") . "." . $ext;
+        // dd($old_name,$ext,$new_name);
+
+        move_uploaded_file($_FILES["image"]["tmp_name"], "../public/asset/" . $new_name);
+        return $new_name;
+
+    }
+    return false;
+    
 }
 
 ?>
@@ -57,12 +96,13 @@ function add_user2()
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <input type="text" name="firstname" placeholder="saisir le prenom"><br>
         <input type="text" name="lastname" placeholder="saisir le nom"><br>
         <input type="email" name="email" placeholder="saisir l'email"><br>
         <input type="password" name="password" placeholder="saisir le mot de passe"><br>
         <input type="password" name="password2" placeholder="Confirmer le mot de passe"><br>
+        <input type="files">
         <input type="submit" name="submit" value="envoyer">
     </form>
     <p><?= $result ?? "" ?></p>

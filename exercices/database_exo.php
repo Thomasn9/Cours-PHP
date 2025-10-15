@@ -20,7 +20,7 @@ function connectBDD(): PDO
 function save_user(array $user)
 {
     // requete sql
-    $sql = "INSERT INTO users(firstname,lastname,email,`password`) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO users(firstname,lastname,email,`password`,img) VALUES (?,?,?,?,?)";
     try {
         // préparation de la requete sql
         $bdd = connectBDD()->prepare($sql);
@@ -29,6 +29,7 @@ function save_user(array $user)
         $bdd->bindParam(2, $user["lastname"], PDO::PARAM_STR);
         $bdd->bindParam(3, $user["email"], PDO::PARAM_STR);
         $bdd->bindParam(4, $user["password"], PDO::PARAM_STR);
+        $bdd->bindParam(5,$user["img"],PDO::PARAM_STR);
 
         // exectution
         $bdd->execute();

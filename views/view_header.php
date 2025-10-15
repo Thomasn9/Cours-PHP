@@ -91,6 +91,7 @@
               <a class="dropdown-item" href="/lessons/mdp_regex.php">Regex sur Mots de passe</a>
               <a class="dropdown-item" href="/lessons/add_image.php">Ajout de fichier dans un form</a>
               <a class="dropdown-item" href="/lessons/upload_fichier.php">Upload de fichier et sécuriter</a>
+              <a class="dropdown-item" href="/lessons/securiter_svg.php">Sécuriser un upload SVG</a>
             </div>
           </li>
           <!-- ================================================\\TP//============================================================= -->

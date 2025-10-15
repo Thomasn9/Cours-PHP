@@ -20,7 +20,7 @@ if (isset($_POST["submit"])){
 
     if($_FILES["image"]["size"] > (100 * 1024 * 1024)){
         return "l'image est trop grosse !!";
-    }else if($ext != "png" || $ext != "PNG" || $ext != "jpg" || $ext != "jpeg"){
+    }else if($ext != "png" && $ext != "PNG" && $ext != "jpg" && $ext != "jpeg"){
         echo "Le format n'est pas pris en compte";
     }
     // dd($old_name,$ext,$new_name);
